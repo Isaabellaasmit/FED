@@ -1,0 +1,282 @@
+
+/****************************************************************/
+/*                      Basis document styling                  */
+/****************************************************************/
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Outfit", sans-serif;
+}
+
+
+/****************************************************************/
+/*                         Header styling                       */
+/****************************************************************/
+
+
+header {
+    position: relative;
+    
+    margin: .5em;
+    padding: .2em;
+
+    background-color: white;
+}
+
+header h1 {
+    position: absolute;
+
+    top: 1.5em;
+}
+
+header h1 img {
+    width: 2.3em;
+    height: auto;
+}
+
+header section {
+    position: fixed;
+    top: 3.5em;
+    right: 1em;
+
+    background-color: white;
+    border-radius: 15px;
+
+    padding: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+
+header section img {
+    width: 3.2em;
+    height: auto;
+}
+
+/****************************************************************/
+/*                           Main styling                       */
+/****************************************************************/
+
+
+
+
+
+/*           Article 1            */
+/**********************************/
+
+main img {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-grow: 1;
+    top: -3em;
+}
+
+
+
+@keyframes eersteTekst {
+    0% {
+        transform: translate(0, 0);
+        transform: rotate(2deg);
+        }
+    40% {
+        transform: translate(0, 0);
+        }
+    70% {
+        transform: translate(0, -8em);
+    }
+    100% {
+        transform: translate(0, -12em);
+
+    }
+    }
+
+@keyframes tweedeTekst {
+    0% {
+        transform: translate(0, 0em);
+        transform: rotate(2deg);
+    }
+    40% {
+        transform: translate(0, 0);
+        transform: rotate(2deg);
+    }
+    50% { 
+        transform: translate(0, 3em);
+        transform: rotate(2deg);
+    }
+    80% {
+        transform: translate(0, 8.5em);
+    }
+    100% {
+        transform: translate(0, 8.5em);
+    }
+}
+
+main article:first-of-type {
+    background-image: linear-gradient(to bottom right, #1E1638, #251357);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 2.2em;
+    padding-bottom: 5em;
+    margin-top: -2em;
+    margin-bottom: 1em;
+
+    transform: skewY(-5deg);
+    overflow: hidden;
+
+    position: relative;
+}
+ 
+
+
+main article:first-of-type section:first-of-type {
+
+    padding: 2em;
+    padding-bottom: 5em;
+    margin-top: -2em;
+    margin-bottom: 1em;
+    margin-left: -2em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    transform: skewY(-5deg);
+
+
+    position: absolute;
+    top: -12em;
+
+    animation-name: tweedeTekst; 
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+
+main article:first-of-type section a {
+    background-color: #FF4B37;
+    color: white;
+    text-decoration: none;
+    padding: .5em;
+    padding-right: .8em;
+    padding-left: .8em;
+    margin-top: .6em;
+    margin-left: 1em;
+    border-radius: 20px;
+
+}
+
+main article:first-of-type h2 p {
+    display: block;
+}
+
+
+main article:first-of-type section:first-of-type h2 {
+    padding-bottom: .5em;
+
+    animation-name: tweedeTekst; 
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+
+
+}
+
+
+
+main article:first-of-type p {
+    animation-name: tweedeTekst; 
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+main article:first-of-type section:nth-of-type(2) {
+    animation-name: eersteTekst; 
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+main article:first-of-type section:nth-of-type(2) h2{
+    animation-name: eersteTekst; 
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+main article:first-of-type section:nth-of-type(2) p{
+    animation-name: eersteTekst; 
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+
+/*           Article 2            */
+/**********************************/
+main article:nth-of-type(2) {
+    overflow: scroll;
+    margin-top: 3em;
+
+    padding: 2em;
+    padding-bottom: 5em;
+    margin-top: -2em;
+    margin-bottom: 1em;
+
+}
+
+
+/*         Sections (2)           */
+
+main article:nth-of-type(2) h3 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+
+    font-size: 1.5em;
+}
+
+main article:nth-of-type(2) p {
+    font-weight: 300;
+}
+
+main article:nth-of-type(2) img {
+    width: 8em;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5em;
+}
+
+main article:nth-of-type(2) p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+main article:nth-of-type(5) section img {
+    width: 4em;
+    height: auto;
+}
