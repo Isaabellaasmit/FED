@@ -55,7 +55,7 @@ header section {
 }
 
 header section img {
-    width: 3.2em;
+    width: 3.7em;
     height: auto;
 }
 
@@ -233,10 +233,14 @@ main article:first-of-type section:nth-of-type(2) p{
 }
 
 
+
+
+
+
 /***   Article 'Dit is Air Up'    ***/
 /************************************/
+
 main article:nth-of-type(2) {
-    overflow: scroll;
     margin-top: 3em;
 
     padding: 2em;
@@ -253,19 +257,8 @@ main article:nth-of-type(2) p {
 }
 
 
-
-/****      Section       ****/
-
-
-
-
-
-
-
-
 main>section {
-    font-weight: 350;
-
+    font-weight: 400;
     text-align: center;
 }
 
@@ -346,15 +339,58 @@ main article:nth-of-type(3) {
     padding: 2em;
 }
 
-main article:nth-of-type(5) section img {
-    width: 4em;
-    height: auto;
-}
-
 main article:nth-of-type(3) p {
     font-weight: 400;
 }
 
+main article:nth-of-type(3) a {
+    position: relative;
+    
+    text-decoration: none;
+    font-weight: 400;
+    color: #FC442F;
+
+    top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    transition: .3s;
+}
+
+main article:nth-of-type(3) a::before {
+    content: "";
+    background-color: #FC442F;  
+    
+    position: absolute;
+
+    left: .5em;
+    right: .5em;
+    bottom: -.10em;
+
+    height: .25em;
+
+    border-radius: .125em;
+
+    transform: scaleX(0);
+    transition: .3s;
+}
+
+main article:nth-of-type(3) a:hover {
+    font-weight: 900;
+    color: #651b13;
+}
+
+main article:nth-of-type(3) a:hover::before{
+    transform: scaleX(1.2);
+}
+
+main article:nth-of-type(3) img {
+    width: 100%;
+    height: auto;
+
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
 
 
 
@@ -366,8 +402,8 @@ main article:nth-of-type(3) p {
 /************************************************/
 
 main article:nth-of-type(4) {
-    background-color: pink;
     padding: 2em;
+    background-color: #F6F6F6;
 }
 
 main article:nth-of-type(4) section {
@@ -427,6 +463,85 @@ main article:nth-of-type(4) div button {
 
 
 
+/***           Article 'Meer info'            ***/
+/************************************************/
+
+main article:nth-of-type(5) ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+}
+
+main article:nth-of-type(5) ul li {
+    flex-basis: 50%;
+    list-style: none;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main article:nth-of-type(5) ul li img {
+    width: 90%;
+    height: auto;
+}
+
+main article:nth-of-type(5) ul li a {
+    display: block;
+    position: relative;
+
+    font-weight: 400;
+    color: #FC442F;
+
+    margin: .8em;
+    margin-bottom: 2em;
+    padding-bottom: .3em;
+    text-align: center;
+    justify-content: center;
+
+    text-decoration: none;
+    transition: 3s;
+}
+
+main article:nth-of-type(5) ul li a::before {
+    content: "";
+    background-color: #FC442F;  
+    
+    position: absolute;
+
+    left: .5em;
+    right: .5em;
+    bottom: -.10em;
+
+    height: .25em;
+
+    border-radius: .125em;
+
+    transform: scaleX(0);
+    transition: .3s;
+}
+
+main article:nth-of-type(5) ul li a:hover {
+    font-weight: 900;
+    color: #651b13;
+}
+
+main article:nth-of-type(5) ul li a:hover::before{
+    transform: scaleX(0.7);
+}
+
+
+
+
+
+
+
+/***        4 voordelen voor de klant         ***/
+/************************************************/
+
+
+
 
 
 
@@ -440,7 +555,7 @@ main article:nth-of-type(4) div button {
     }
 
 
-    /*         Caroussel         */
+    /*         Animatie          */
     /*****************************/
     main article:first-of-type {
         transform: skewY(-2deg);
@@ -455,11 +570,42 @@ main article:nth-of-type(4) div button {
     }
 
 
+    /*       Hoe werk air up      */
+    /******************************/
+    main article:nth-of-type(3) img {
+        width: 50%;
+        height: auto;
+    }
+
+    main article:nth-of-type(3) section {
+        display: flex;
+
+        background-color: #F6F6F6;
+    }
+
+    main article:nth-of-type(3) p {
+        margin: 2em;
+        text-align: start;
+    }
+
+    main article:nth-of-type(3) div {
+        justify-content: center;
+        text-align: center;
+    }
+
+    main article:nth-of-type(3) a {
+        margin: 2em;
+        padding: 2em;
+    }
+
+
+
     /*       Link underline (Lees meer)     */
     /****************************************/
-    main>section a:hover::before {
+    main>section a:hover::before, article:nth-of-type(3) a:hover::before, article:nth-of-type(5) ul li a:hover::before {
         transform: scaleX(.8);
     }
+
 
 
     /*        Top producten        */
@@ -472,5 +618,36 @@ main article:nth-of-type(4) div button {
     main article:nth-of-type(4) img {
         width: 17em;
         height: auto;
+    }
+
+
+    /*           Meer info         */
+    /*******************************/
+    main article:nth-of-type(5) ul {
+        display: flex;
+        
+    }
+    
+    main article:nth-of-type(5) ul li {
+        list-style: none;
+
+        flex-basis: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    main article:nth-of-type(5) ul li img {
+        width: 11em;
+        height: auto;
+
+        margin-top: 1em;
+    }
+
+    main article:nth-of-type(5) ul li a {
+        display: flex;
     }
 }
